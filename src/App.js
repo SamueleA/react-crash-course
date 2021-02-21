@@ -9,7 +9,6 @@ function App() {
         name="codeclimbing"
         description="the best youtube ever"
         age={20}
-        onClick={() => alert('you clicked codeclimbing!')}
         UserAvatar={UserAvatar}
         height={6}
       />
@@ -17,7 +16,6 @@ function App() {
         name="Samuele"
         description="A cool guy"
         age={30}
-        onClick={() => alert('you clicked Samuele!')}
         UserAvatar={UserAvatar}
         height={6}
       />
@@ -25,7 +23,6 @@ function App() {
         name="john"
         description="Another cool guy"
         age={40}
-        onClick={() => alert('you clicked john!!')}
         UserAvatar={UserAvatar}
       />
     </div>

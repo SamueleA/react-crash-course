@@ -6,7 +6,6 @@ const MyProfile = ({
   name,
   description,
   age,
-  // onClick,
   UserAvatar,
   height,
 }) => {
@@ -35,7 +34,6 @@ MyProfile.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   age: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired,
   UserAvatar: PropTypes.element.isRequired,
   height: PropTypes.number,
 };
