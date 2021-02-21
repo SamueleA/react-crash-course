@@ -1,19 +1,25 @@
 import PropTypes from 'prop-types';
 
+import EditableString from '../EditableString';
+
 const MyProfile = ({
   name,
   description,
   age,
-  onClick,
+  // onClick,
   UserAvatar,
   height,
 }) => {
 
   return (
-    <div className="my-class" onClick={onClick}>
+    <div className="my-class">
       <UserAvatar name={name} />
       <h1>MyProfile</h1>
-      <p>Name: {name}</p>
+      <div>{'Name: '}
+        <EditableString
+          initialValue={name}
+        />
+      </div>
       <p>Description: {description}!</p>
       <p>Age: {age}</p>
       <p>Height: {height}</p>

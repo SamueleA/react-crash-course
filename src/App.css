@@ -32,6 +32,10 @@
   color: #61dafb;
 }
 
+.editable-field-button {
+  margin-left: 10px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
