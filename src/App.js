@@ -21,7 +21,7 @@ function App() {
       />
       <MyProfile
         name="john"
-        description="Another cool guy"
+        description="Another cool guy!"
         age={40}
         UserAvatar={UserAvatar}
       />
