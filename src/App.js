@@ -1,10 +1,12 @@
 import MyProfile from './components/MyProfile';
 import UserAvatar from './components/UserAvatar';
+import BtcPrice from './components/BtcPrice';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <BtcPrice />
       <MyProfile
         name="codeclimbing"
         description="the best youtube ever"
