@@ -1,33 +1,48 @@
-import MyProfile from './components/MyProfile';
-import UserAvatar from './components/UserAvatar';
-import BtcPrice from './components/BtcPrice';
+import {
+  Link,
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import Home from './views/Home';
+import Profiles from './views/Profiles';
+import About from './views/About';
+import Profile from './views/Profile';
+import NotFound from './views/NotFound';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <BtcPrice />
-      <MyProfile
-        name="codeclimbing"
-        description="the best youtube ever"
-        age={20}
-        UserAvatar={UserAvatar}
-        height={6}
-      />
-      <MyProfile
-        name="Samuele"
-        description="A cool guy"
-        age={30}
-        UserAvatar={UserAvatar}
-        height={6}
-      />
-      <MyProfile
-        name="john"
-        description="Another cool guy!"
-        age={40}
-        UserAvatar={UserAvatar}
-      />
-    </div>
+    <Router>
+      <div className="App">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/profiles">Profiles</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+      </div>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/profiles">
+          <Profiles />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/:id">
+          <Profile />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
