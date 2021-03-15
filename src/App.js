@@ -38,8 +38,11 @@ function App() {
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/:id">
+        <Route path="/profile/:id">
           <Profile />
+        </Route>
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </Router>
